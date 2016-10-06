@@ -1,0 +1,1 @@
+# KGS-Rank-Bot
