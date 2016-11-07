@@ -2,7 +2,7 @@ import sys
 import time
 import telepot
 
-def __init__(self,msg):
+def __init__(self):
     print("Starting KGS Rank Bot")
 
 def handle(self, msg):
