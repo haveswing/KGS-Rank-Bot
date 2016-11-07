@@ -17,9 +17,9 @@ def handle(self, msg):
     elif command == "/start":
         self.sendMessage(chat_id, "Welcome to KGS Rank Bot!", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     elif command == "/info":
-        self.sendMessage(chat_id, "INFO", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        self.sendMessage(chat_id, "INFO_HERE", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     else:
-        self.sendMessage(chat_id, "Unknown command! ", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        self.sendMessage(chat_id, "Unknown command!", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def rank(self, msg):
     chat_id = msg['from']['id']
