@@ -30,7 +30,7 @@ def __init__(self, msg):
     command = msg['text']
     
     if command == "/rank":
-        rank()
+        rank(self)
     else:
         print("Unknown command.")
 
