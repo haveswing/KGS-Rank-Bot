@@ -18,7 +18,7 @@ def rank(self, msg):
     command = msg['text']
     
     self.sendMessage(chat_id, input("Insert a KGS username to see the rating graph:"), parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    kgsUser = input
+    kgsUser = self.input
     graphUrl = "https://www.gokgs.com/servlet/graph/" + kgsUser + "-en_US.png"
     print(graphUrl)
     
