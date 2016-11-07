@@ -2,7 +2,7 @@ import sys
 import time
 import telepot
 
-def handle(msg):
+def handle(self, msg):
     flavor = telepot.flavor(msg)
 
     summary = telepot.glance(msg, flavor=flavor)
@@ -11,6 +11,15 @@ def handle(msg):
     chat_id = msg['from']['id']
     user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
+    
+    if command == "/rank":
+        rank()
+    elif command == "/start":
+        self.sendMessage(chat_id, "Welcome to KGS Rank Bot!", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    elif command == "/info":
+        self.sendMessage(chat_id, "INFO", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    else:
+        self.sendMessage(chat_id, "Unknown command! ", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def rank(self, msg):
     chat_id = msg['from']['id']
@@ -23,17 +32,7 @@ def rank(self, msg):
     
     self.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
-def __init__(self, msg):
-    chat_id = msg['from']['id']
-    user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
-    command = msg['text']
     
-    if command == "/rank":
-        rank()
-    else:
-        print("Unknown command.")
-
-
 TOKEN = sys.argv[1]  # get token from command-line
 
 bot = telepot.Bot("269117423:AAH83p9Qhllcu9KbloxeUzglOfIWw-Orwvg")
