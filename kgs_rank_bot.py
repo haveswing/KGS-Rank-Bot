@@ -13,19 +13,22 @@ def handle(msg):
     command = msg['text']
     
 def rank(self, msg):
-    
     chat_id = msg['from']['id']
     user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
     
-    kgsuser = input("Insert a KGS username to see the rating graph:")
-    graphUrl = "https://www.gokgs.com/servlet/graph/" + kgsuser + "-en_US.png"
+    self.sendMessage(chat_id, input("Insert a KGS username to see the rating graph:"), parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    kgsUser = input
+    graphUrl = "https://www.gokgs.com/servlet/graph/" + kgsUser + "-en_US.png"
     print(graphUrl)
     
     self.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def __init__(self, msg):
+    chat_id = msg['from']['id']
+    user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
+    
     if command == "/rank":
         rank()
     else:
