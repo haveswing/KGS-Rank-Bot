@@ -2,6 +2,9 @@ import sys
 import time
 import telepot
 
+def __init__(self,msg):
+    print("Starting KGS Rank Bot")
+
 def handle(self, msg):
     flavor = telepot.flavor(msg)
 
