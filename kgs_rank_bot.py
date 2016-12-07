@@ -3,7 +3,7 @@ import time
 import telepot
 
 def __init__(self):
-    print("KGS Rank Bot started.")
+    print 'KGS Rank Bot started.'
 
 def handle(self, msg):
     flavor = telepot.flavor(msg)
@@ -15,11 +15,11 @@ def handle(self, msg):
     user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
     
-    if command.startswith("/rank "):
+    if command.startswith('/rank '):
         rank(msg)
-    elif command == "/start":
+    elif command == '/start':
         bot.sendMessage(chat_id, "Welcome to KGS Rank Bot!", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    elif command == "/info":
+    elif command == '/info':
         bot.sendMessage(chat_id, "INFO_HERE", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def rank(self, msg):
@@ -29,7 +29,7 @@ def rank(self, msg):
     
     kgsUser = msg['text'][6:]
     graphUrl = "https://www.gokgs.com/servlet/graph/" + kgsUser + "-en_US.png"
-    print(graphUrl)
+    print graphUrl
     
     bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
@@ -38,7 +38,7 @@ TOKEN = sys.argv[1]  # get token from command-line
 
 bot = telepot.Bot("269117423:AAH83p9Qhllcu9KbloxeUzglOfIWw-Orwvg")
 bot.message_loop(handle)
-print("Listening ...")
+print 'Listening ...'
 
 # Keep the program running.
 while 1:
