@@ -18,9 +18,9 @@ def handle(self, msg):
     if command.startswith('/rank '):
         rank(msg)
     elif command == '/start':
-        bot.sendMessage(chat_id, "Welcome to KGS Rank Bot!", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        self.sendMessage(chat_id, "Welcome to KGS Rank Bot!", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     elif command == '/info':
-        bot.sendMessage(chat_id, "INFO_HERE", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        self.sendMessage(chat_id, "INFO_HERE", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def rank(self, msg):
     chat_id = msg['from']['id']
@@ -31,7 +31,7 @@ def rank(self, msg):
     graphUrl = "https://www.gokgs.com/servlet/graph/" + kgsUser + "-en_US.png"
     print graphUrl
     
-    bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    self.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
     
 TOKEN = sys.argv[0]  # get token from command-line
