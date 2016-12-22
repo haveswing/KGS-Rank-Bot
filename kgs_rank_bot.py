@@ -36,7 +36,7 @@ def rank(self, msg):
     
 TOKEN = sys.argv[0]  # get token from command-line
 
-bot = telepot.Bot("quicèiltoken")
+bot = telepot.Bot("269117423:AAH83p9Qhllcu9KbloxeUzglOfIWw-Orwvg")
 bot.message_loop(handle)
 print 'Listening ...'
 
