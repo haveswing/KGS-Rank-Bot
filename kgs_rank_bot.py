@@ -5,7 +5,7 @@ import telepot
 def __init__(self):
     print 'KGS Rank Bot started.'
 
-def handle(self, msg):
+def handle(self, msg, bot):
     flavor = telepot.flavor(msg)
 
     summary = telepot.glance(msg, flavor=flavor)
