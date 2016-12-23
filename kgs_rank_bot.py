@@ -22,7 +22,7 @@ def handle(msg):
     elif command == '/info':
         bot.sendMessage(chat_id, "INFO HERE", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
-def rank(self, msg):
+def rank(msg):
     kgsUser = msg['text'][6:]
     graphUrl = "https://www.gokgs.com/servlet/graph/" + kgsUser + "-en_US.png"
     print graphUrl
