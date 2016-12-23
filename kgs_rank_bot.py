@@ -23,6 +23,10 @@ def handle(msg):
         bot.sendMessage(chat_id, "INFO HERE", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def rank(msg):
+    chat_id = msg['from']['id']
+    # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
+    command = msg['text']
+    
     kgsUser = msg['text'][6:]
     graphUrl = "https://www.gokgs.com/servlet/graph/" + kgsUser + "-en_US.png"
     print graphUrl
