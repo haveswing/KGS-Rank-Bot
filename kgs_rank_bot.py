@@ -12,7 +12,7 @@ def handle(msg):
     print(flavor, summary)
     
     chat_id = msg['from']['id']
-    user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
+    user_name = "%s %s" % (msg['from']['first_name'])
     command = msg['text']
     
     if command.startswith('/rank '):
