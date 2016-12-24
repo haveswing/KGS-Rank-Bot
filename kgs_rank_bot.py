@@ -2,7 +2,7 @@ import sys
 import time
 import telepot
 
-def __init__(self, host, port):
+def __init__(self):
     print 'KGS Rank Bot started.'
 
 def handle(msg):
@@ -36,11 +36,9 @@ def rank(msg):
     
 TOKEN = sys.argv[0]  # get token from command-line
 
-bot = telepot.Bot("269117423:AAH83p9Qhllcu9KbloxeUzglOfIWw-Orwvg", host='0.0.0.0', port=5000)
+bot = telepot.Bot("269117423:AAH83p9Qhllcu9KbloxeUzglOfIWw-Orwvg")
 bot.message_loop(handle)
 bot.setWebhook()  # unset webhook by supplying no parameter
-# port = int(os.environ.get('PORT', 5000))
-# bot.(host='0.0.0.0', port=5000)
 print 'Listening ...'
 
 # Keep the program running.
