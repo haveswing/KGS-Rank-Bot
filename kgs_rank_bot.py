@@ -39,6 +39,8 @@ TOKEN = sys.argv[0]  # get token from command-line
 bot = telepot.Bot("269117423:AAH83p9Qhllcu9KbloxeUzglOfIWw-Orwvg")
 bot.message_loop(handle)
 bot.setWebhook()  # unset webhook by supplying no parameter
+port = int(os.environ.get('PORT', 5000))
+bot.run(host='0.0.0.0', port=port)
 print 'Listening ...'
 
 # Keep the program running.
