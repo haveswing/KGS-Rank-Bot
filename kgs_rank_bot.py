@@ -16,7 +16,7 @@ def handle(msg):
     command = msg['text']
     
     if command.startswith('/rank '):
-        rank(msg, graphUrl)
+        rank()
     elif command == '/start':
         bot.sendMessage(chat_id, 'Welcome to KGS Rank Bot!', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     elif command == '/info':
@@ -32,7 +32,7 @@ def rank(msg):
     print graphUrl
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    bot.sendPhoto(chat_id, 'graphUrl')
+    bot.sendPhoto(chat_id, graphUrl)
     
 TOKEN = sys.argv[0]  # get token from command-line
 
