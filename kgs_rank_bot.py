@@ -11,7 +11,7 @@ def handle(msg):
     summary = telepot.glance(msg, flavor=flavor)
     print(flavor, summary)
     
-    chat_id = msg['from']['id']
+    chat_id = msg['chat']['id']
     # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
     
@@ -23,7 +23,7 @@ def handle(msg):
         bot.sendMessage(chat_id, "INFO\nHERE", parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def rank(msg):
-    chat_id = msg['from']['id']
+    chat_id = msg['chat']['id']
     # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
     
