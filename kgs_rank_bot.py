@@ -16,7 +16,7 @@ def handle(msg):
     command = msg['text']
     
     if command.startswith('/rank '):
-        rank()
+        rank(msg)
     elif command == '/start':
         bot.sendMessage(chat_id, 'Welcome to KGS Rank Bot!', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     elif command == '/info':
