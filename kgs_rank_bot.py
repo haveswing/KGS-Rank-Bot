@@ -33,12 +33,12 @@ def rank(msg):
     print graphUrl
     
     download = graphUrl
-    urlretrieve(download, "https://github.com/haveswing/KGS-Rank-Bot/tree/master/graphs/graph.png")
+    urlretrieve(download, "C:\graph.png")
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     # bot.sendPhoto(chat_id, graphUrl)
     
-    bot.sendPhoto(chat_id, "https://github.com/haveswing/KGS-Rank-Bot/tree/master/graphs/graph.png")
+    bot.sendPhoto(chat_id, "C:\graph.png")
     
 TOKEN = sys.argv[0]  # get token from command-line
 
