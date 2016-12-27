@@ -1,6 +1,7 @@
 import sys
 import time
 import telepot
+import urllib
 
 def __init__(self):
     print 'KGS Rank Bot started.'
