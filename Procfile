@@ -1,1 +1,1 @@
-web: python kgs_rank_bot.py $PORT
+web: python kgs_rank_bot.py
