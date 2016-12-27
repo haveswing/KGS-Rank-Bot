@@ -43,5 +43,5 @@ bot.setWebhook()  # unset webhook by supplying no parameter
 print 'Listening ...'
 
 # Keep the program running.
-while 0:
+while 1:
     time.sleep(10)
