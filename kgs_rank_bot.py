@@ -44,4 +44,5 @@ print 'Listening ...'
 
 # Keep the program running.
 while 1:
-    time.sleep(10)
+    # time.sleep(10)
+    bot.message_loop(run_forever='Listening ...')
