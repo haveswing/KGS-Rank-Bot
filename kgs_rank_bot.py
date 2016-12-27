@@ -32,7 +32,7 @@ def rank(msg):
     print graphUrl
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    bot.sendPhoto(chat_id, graphUrl)
+    bot.sendPhoto(chat_id, 'http://img15.deviantart.net/48ff/i/2013/067/e/8/spring_breakers_png_by_flawlessduck-d5xdmmp.png')
     
 TOKEN = sys.argv[0]  # get token from command-line
 
