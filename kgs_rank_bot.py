@@ -32,7 +32,7 @@ def rank(msg):
     print graphUrl
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    bot.sendPhoto(chat_id, 'https://www.gokgs.com/servlet/graph/haveswing-en_US.png')
+    bot.sendPhoto(chat_id, 'http://www.gokgs.com/servlet/graph/haveswing-en_US.png')
     
 TOKEN = sys.argv[0]  # get token from command-line
 
