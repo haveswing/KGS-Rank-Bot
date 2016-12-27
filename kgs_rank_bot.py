@@ -32,8 +32,13 @@ def rank(msg):
     graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
     print graphUrl
     
+    download = graphUrl
+    urlretrieve(download, "https://github.com/haveswing/KGS-Rank-Bot/tree/master/graphs/graph.png")
+    
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    bot.sendPhoto(chat_id, graphUrl)
+    # bot.sendPhoto(chat_id, graphUrl)
+    
+    bot.sendPhoto(chat_id, "https://github.com/haveswing/KGS-Rank-Bot/tree/master/graphs/graph.png")
     
 TOKEN = sys.argv[0]  # get token from command-line
 
