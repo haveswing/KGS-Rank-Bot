@@ -40,7 +40,7 @@ TOKEN = sys.argv[0]  # get token from command-line
 bot = telepot.Bot('269117423:AAH83p9Qhllcu9KbloxeUzglOfIWw-Orwvg')
 bot.message_loop(handle)
 bot.setWebhook()  # unset webhook by supplying no parameter
-print 'Listening ...'
+print 'KGS Rank Bot is listening...'
 
 # Keep the program running.
 while 1:
