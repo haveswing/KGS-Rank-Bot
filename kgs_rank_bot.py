@@ -35,7 +35,7 @@ def rank(msg):
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     bot.sendPhoto(chat_id, graphUrl)
     
-TOKEN = sys.argv[0]  # get token from command-line
+TOKEN = sys.argv[0]  # get token from command-line (was 1)
 
 bot = telepot.Bot('269117423:AAH83p9Qhllcu9KbloxeUzglOfIWw-Orwvg')
 bot.message_loop(handle)
