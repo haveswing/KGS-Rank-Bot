@@ -29,11 +29,11 @@ def rank(msg):
     command = msg['text']
     
     kgsUser = msg['text'][6:]
-    graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
+    graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US'
     print graphUrl
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    bot.sendPhoto(chat_id, graphUrl)
+    bot.sendPhoto(chat_id, (graphUrl + '.png'))
     
 TOKEN = sys.argv[0]  # get token from command-line
 
