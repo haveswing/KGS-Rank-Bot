@@ -34,7 +34,7 @@ def rank(msg):
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     # bot.sendPhoto(chat_id, graphUrl)
-    bot.urlopen(graphUrl)
+    urlopen(graphUrl)
     
 TOKEN = sys.argv[0]  # get token from command-line (was 1)
 
