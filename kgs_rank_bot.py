@@ -36,6 +36,7 @@ def rank(msg):
     opener = urllib.FancyURLopener(proxies)
     theGraph = opener.open(graphUrl)
     theGraph.read()
+    print theGraph
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     bot.sendPhoto(chat_id, theGraph, caption=('KGS rank graph for ' + kgsUser + '.'))
