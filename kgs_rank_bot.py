@@ -1,6 +1,7 @@
 import sys
 import time
 import urllib
+import urllib2
 import os
 import telepot
 
