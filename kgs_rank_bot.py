@@ -35,7 +35,7 @@ def rank(msg):
     print graphUrl
     
     # theGraph = urllib2.urlopen(graphUrl)
-    with open(graphUrl, 'rb') as file:
+    with urlopen(graphUrl, 'rb') as file:
         bot.sendPhoto(chat_id, file)
     
     
