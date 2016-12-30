@@ -34,7 +34,7 @@ def rank(msg):
     graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
     print graphUrl
     
-    getU = geturl(graphUrl)
+    getU = urllib2.geturl(graphUrl)
     theGraph = urllib2.urlopen(getU)
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
