@@ -31,14 +31,10 @@ def rank(msg):
     command = msg['text']
     
     kgsUser = msg['text'][6:]
-    graphUrl = 'http://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
+    graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
     print graphUrl
     
-    # theGraph = urllib2.urlopen(graphUrl)
-    
-    theGraph = urllib2.urlopen('graphUrl')
-    theGraph.getcode()
-    theGraph.read()
+    theGraph = urllib2.urlopen(graphUrl)
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     bot.sendPhoto(chat_id, theGraph, caption=('KGS rank graph for ' + kgsUser + '.'))
