@@ -42,7 +42,7 @@ def rank(msg):
 TOKEN = sys.argv[0]  # get token from command-line (was 1)
 
 # bot = telepot.Bot('269117423:AAH83p9Qhllcu9KbloxeUzglOfIWw-Orwvg')
-bot = telepot.Bot(print os.environ.get('TOKEN_VARIABLE'))
+bot = telepot.Bot(os.environ.get('TOKEN_VARIABLE'))
 bot.message_loop(handle)
 bot.setWebhook()  # unset webhook by supplying no parameter
 print 'KGS Rank Bot is listening...'
