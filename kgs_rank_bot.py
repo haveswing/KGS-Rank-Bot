@@ -31,7 +31,7 @@ def rank(msg):
     command = msg['text']
     
     kgsUser = msg['text'][6:]
-    graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
+    graphUrl = 'http://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
     print graphUrl
     
     # theGraph = urllib2.urlopen(graphUrl)
