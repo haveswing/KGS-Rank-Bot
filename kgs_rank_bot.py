@@ -34,7 +34,7 @@ def rank(msg):
     graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
     print graphUrl
     
-    theGraph = open(graphUrl,'wb')
+    theGraph = open('rankgraph.png','wb')
     theGraph.write(urllib.urlopen(graphUrl).read())
     theGraph.close()
     
