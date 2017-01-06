@@ -37,7 +37,7 @@ def rank(msg):
     print 'Url: ' + graphUrl
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    bot.sendDocument(chat_id, urllib2.openurl(graphUrl, 'rb'), caption=('KGS rank graph for ' + kgsUser + '.'))
+    bot.sendDocument(chat_id, urllib2.urlopen(graphUrl, 'rb'), caption=('KGS rank graph for ' + kgsUser + '.'))
     
 TOKEN = sys.argv[0]  # get token from command-line (was 1)
 
