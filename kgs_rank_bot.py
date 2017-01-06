@@ -33,11 +33,8 @@ def rank(msg):
     kgsUser = msg['text'][6:]
     graphFile = kgsUser + '-en_US.png'
     graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
-    print graphFile
-    print graphUrl
-    
-    # theGraph = urllib.urlretrieve(graphUrl, graphFile)
-    # theGraph.read()
+    print 'File: ' + graphFile
+    print 'Url: ' + graphUrl
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     bot.sendPhoto(chat_id, graphUrl, caption=('KGS rank graph for ' + kgsUser + '.'))
