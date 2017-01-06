@@ -36,11 +36,11 @@ def rank(msg):
     print graphFile
     print graphUrl
     
-    theGraph = urllib.urlretrieve(graphUrl, graphFile)
-    theGraph.read()
+    # theGraph = urllib.urlretrieve(graphUrl, graphFile)
+    # theGraph.read()
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    bot.sendPhoto(chat_id, theGraph, caption=('KGS rank graph for ' + kgsUser + '.'))
+    bot.sendPhoto(chat_id, graphUrl, caption=('KGS rank graph for ' + kgsUser + '.'))
     
 TOKEN = sys.argv[0]  # get token from command-line (was 1)
 
