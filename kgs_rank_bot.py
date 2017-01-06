@@ -35,7 +35,7 @@ def rank(msg):
     print graphUrl
     
     theGraph = urllib.URLopener()  
-    theGraph.retrieve(graphUrl, '*.png')
+    theGraph.retrieve(graphUrl, (kgsUser + '-en_US.png'))
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     bot.sendPhoto(chat_id, theGraph, caption=('KGS rank graph for ' + kgsUser + '.'))
