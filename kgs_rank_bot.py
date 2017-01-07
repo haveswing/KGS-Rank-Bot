@@ -40,6 +40,7 @@ def rank(msg):
     
     with urllib2.urlopen(graphUrl) as file:
         bot.sendPhoto(chat_id, file, caption=('KGS rank graph for ' + kgsUser + '.'))
+        file.close()
     
     # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     # bot.sendPhoto(chat_id, theGraph, caption=('KGS rank graph for ' + kgsUser + '.'))
