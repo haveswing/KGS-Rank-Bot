@@ -28,7 +28,6 @@ def handle(msg):
 def rank(msg):
     print 'Rank graph request:'
     chat_id = msg['chat']['id']
-    print msg
     # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
     print 'ID= ', chat_id
@@ -42,7 +41,7 @@ def rank(msg):
     
     theGraph = urllib2.urlopen(graphUrl)
     
-    if ['id'] == 220280982:
+    if chat_id == 220280982:
     
         bot.sendPhoto(chat_id, ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
     
