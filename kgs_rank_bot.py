@@ -61,7 +61,7 @@ def howtorank(msg):
     command = msg['text']
     
     print chat_id, 'request how to rank.'
-    bot.sendMessage(chat_id, 'Use "/rank username" to receive the rank graph.\ne.g.: "/rank ChoChikun".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/rank ChoChikun".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 
 TOKEN = sys.argv[0]
