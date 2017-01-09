@@ -67,7 +67,9 @@ def rankL(msg):
     
     bot.sendMessage(chat_id, 'Insert a KGS username to receive the rank graph:', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
-    kgsUserL = msg['text']
+    theusername = msg['text']
+    
+    kgsUserL = theusername
     print 'Requested username= ', msg
     graphFileL = kgsUserL + '-en_US.png'
     graphUrlL = 'https://www.gokgs.com/servlet/graph/' + kgsUserL + '-en_US.png'
