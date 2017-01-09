@@ -40,6 +40,7 @@ def rank(msg):
     print 'Url= ' + graphUrl
     
     theGraph = urllib2.urlopen(graphUrl)
+    theGraphLog = urllib2.urlopen(graphUrl)
     
     if chat_id == 220280982666:
     
@@ -50,7 +51,8 @@ def rank(msg):
         
     else:
         bot.sendPhoto(chat_id, ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
-        bot.sendPhoto(220280982, ('rankgraphlog.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
+        bot.sendPhoto(220280982, ('rankgraphlog.png', theGraphLog), caption=('KGS rank graph for ' + kgsUser + '.'))
+        
         print 'Processing rankgraph.png ...'
         print 'Processing rankgraphlog.png ...'
         print 'Done, request fulfilled.'
