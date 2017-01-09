@@ -40,6 +40,9 @@ def handle(msg):
     elif command == '/top100@kgsrankbot':
         print chat_id, 'request top100.'
         bot.sendMessage(chat_id, 'Top 100 KGS Players:\nhttps://www.gokgs.com/top100.jsp', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    elif command == '/rank chochikun':
+        print chat_id, 'is a genius.'
+        bot.sendMessage(chat_id, 'It was an example, I do not think that Cho Chikun play on KGS.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def rank(msg):
     print 'Rank graph request:'
