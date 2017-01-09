@@ -25,7 +25,7 @@ def handle(msg):
     elif command == '/info':
         print chat_id, 'request info.'
         bot.sendMessage(chat_id, 'INFO\nHERE', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    elif command == 'top100':
+    elif command == '/top100':
         print chat_id, 'request top100.'
         bot.sendMessage(chat_id, 'Top 100 KGS Players:\nhttps://www.gokgs.com/top100.jsp', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
         
