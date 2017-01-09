@@ -42,7 +42,7 @@ def rank(msg):
     
     # if msg = 
     
-    bot.sendPhoto(chat_id, (graphFile, theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
+    bot.sendPhoto(chat_id, ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
     
     print 'Done, request fulfilled.'
     
