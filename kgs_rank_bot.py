@@ -1,8 +1,7 @@
 import sys
 import time
-import urllib
-import urllib2
 import os
+import urllib2
 import telepot
 
 def __init__(self):
