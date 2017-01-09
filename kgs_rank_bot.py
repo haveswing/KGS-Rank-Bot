@@ -28,6 +28,7 @@ def handle(msg):
 def rank(msg):
     print 'Rank graph request:'
     chat_id = msg['chat']['id']
+    print msg
     # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
     print 'ID= ', chat_id
