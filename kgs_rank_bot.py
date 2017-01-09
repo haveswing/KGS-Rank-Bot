@@ -26,22 +26,25 @@ def handle(msg):
         bot.sendMessage(chat_id, 'INFO\nHERE', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def rank(msg):
+    print 'Rank graph request:'
     chat_id = msg['chat']['id']
     # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
-    print 'ID: ', chat_id
+    print 'ID= ', chat_id
     
     kgsUser = msg['text'][6:]
     graphFile = kgsUser + '-en_US.png'
     graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
-    print 'File: ' + graphFile
-    print 'Url: ' + graphUrl
+    print 'File= ' + graphFile
+    print 'Url= ' + graphUrl
     
     theGraph = urllib2.urlopen(graphUrl)
     
     # if msg = 
     
     bot.sendPhoto(chat_id, (graphFile, theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
+    
+    print 'Done, request fulfilled.'
     
 TOKEN = sys.argv[0]  # get token from command-line (was 1)
 
