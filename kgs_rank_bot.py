@@ -29,7 +29,7 @@ def rank(msg):
     chat_id = msg['chat']['id']
     # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
-    print 'ID: ' + chat_id
+    print 'ID: ', chat_id
     
     kgsUser = msg['text'][6:]
     graphFile = kgsUser + '-en_US.png'
