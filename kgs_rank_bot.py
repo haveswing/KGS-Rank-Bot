@@ -60,7 +60,7 @@ def howtorank(msg):
     chat_id = msg['chat']['id']
     command = msg['text']
     
-    print 'How to rank requested from ', chat_id, '.'
+    print chat_id, 'request how to rank.'
     bot.sendMessage(chat_id, 'Use "/rank username" to receive the rank graph.\ne.g.: "/rank ChoChikun".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 
