@@ -41,11 +41,18 @@ def rank(msg):
     
     theGraph = urllib2.urlopen(graphUrl)
     
-    # if msg = 
+    if ['id'] == '220280982':
     
-    bot.sendPhoto(chat_id, ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
+        bot.sendPhoto(chat_id, ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
     
-    print 'Done, request fulfilled.'
+        print 'Processing rankgraph.png ...'
+        print 'Done, request fulfilled.'
+        
+    else:
+        bot.sendPhoto(chat_id, ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
+        bot.sendPhoto('220280982', ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
+        print 'Processing rankgraph.png ...'
+        print 'Done, request fulfilled.'
     
 TOKEN = sys.argv[0]  # get token from command-line (was 1)
 
