@@ -23,8 +23,12 @@ def handle(msg):
     elif command == '/start':
         bot.sendMessage(chat_id, 'Welcome to KGS Rank Bot!', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     elif command == '/info':
+        print chat_id, 'request info.'
         bot.sendMessage(chat_id, 'INFO\nHERE', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    
+    elif command == 'top100':
+        print chat_id, 'request top100.
+        bot.sendMessage(chat_id, 'Top 100 KGS Players:\nhttps://www.gokgs.com/top100.jsp', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        
 def rank(msg):
     print 'Rank graph request:'
     chat_id = msg['chat']['id']
