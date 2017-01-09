@@ -29,6 +29,7 @@ def rank(msg):
     chat_id = msg['chat']['id']
     # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
+    print 'ID: ' + chat_id
     
     kgsUser = msg['text'][6:]
     graphFile = kgsUser + '-en_US.png'
@@ -38,7 +39,8 @@ def rank(msg):
     
     theGraph = urllib2.urlopen(graphUrl)
     
-    # bot.sendPhoto(chat_id, graphUrl, caption=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    # if msg = 
+    
     bot.sendPhoto(chat_id, (graphFile, theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
     
 TOKEN = sys.argv[0]  # get token from command-line (was 1)
