@@ -14,13 +14,12 @@ def handle(msg):
     print(flavor, summary)
     
     chat_id = msg['chat']['id']
-    # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
     
     if command.startswith('/rank '):
         rank(msg)
     elif command == '/rank':
-        rankL(msg)
+        howtorank(msg)
     elif command == '/start':
         bot.sendMessage(chat_id, 'Welcome to KGS Rank Bot!', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     elif command == '/info':
@@ -29,7 +28,6 @@ def handle(msg):
 def rank(msg):
     print 'Rank graph request:'
     chat_id = msg['chat']['id']
-    # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
     print 'ID= ', chat_id
     
@@ -58,51 +56,20 @@ def rank(msg):
         print 'Processing rankgraphlog.png ...'
         print 'Done, request fulfilled.'
 
-def rankL(msg):
-    print 'Rank long graph request:'
+def howtorank(msg):
+    print 'How to rank requested from ', chat_id, '.'
     chat_id = msg['chat']['id']
-    # user_name = "%s %s" % (msg['from']['first_name'], msg['from']['last_name'])
     command = msg['text']
-    print 'ID= ', chat_id
     
-    bot.sendMessage(chat_id, 'Insert a KGS username to receive the rank graph:', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    bot.sendMessage(chat_id, 'Use "/rank + username" to receive the rank graph./nExample: "/rank ChoChikun".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
-    theusername = msg['text']
-    
-    kgsUserL = theusername
-    print 'Requested username= ', msg
-    graphFileL = kgsUserL + '-en_US.png'
-    graphUrlL = 'https://www.gokgs.com/servlet/graph/' + kgsUserL + '-en_US.png'
-    print 'File= ' + graphFileL
-    print 'Url= ' + graphUrlL
-    
-    theGraphL = urllib2.urlopen(graphUrlL)
-    theGraphLogL = urllib2.urlopen(graphUrlL)
-    
-    if chat_id == 220280982:
-    
-        bot.sendPhoto(chat_id, ('rankgraph.png', theGraphL), caption=('KGS rank graph for ' + kgsUserL + '.'))
-    
-        print 'Processing rankgraph.png ...'
-        print 'Done, request fulfilled.'
-        
-    else:
-        bot.sendPhoto(chat_id, ('rankgraph.png', theGraphL), caption=('KGS rank graph for ' + kgsUserL + '.'))
-        bot.sendPhoto(220280982, ('rankgraphlog.png', theGraphLogL), caption=('Rank graph delivered for: ' + kgsUserL + '.'))
-        
-        print 'Processing rankgraph.png ...'
-        print 'Processing rankgraphlog.png ...'
-        print 'Done, request fulfilled.'
-    
-    
-TOKEN = sys.argv[0]  # get token from command-line (was 1)
 
-# bot = telepot.Bot('tokenhere')
+TOKEN = sys.argv[0]
+
 bot = telepot.Bot(os.environ.get('TOKEN_VARIABLE'))
 bot.message_loop(handle)
-bot.setWebhook()  # unset webhook by supplying no parameter
+bot.setWebhook()
 print 'KGS Rank Bot is listening...'
 
-# Keep the program running.
 while 1:
     time.sleep(10)
