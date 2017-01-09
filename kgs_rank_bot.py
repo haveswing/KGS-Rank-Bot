@@ -33,6 +33,7 @@ def rank(msg):
     print 'ID= ', chat_id
     
     kgsUser = msg['text'][6:]
+    print 'Requested username= ', msg
     graphFile = kgsUser + '-en_US.png'
     graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUser + '-en_US.png'
     print 'File= ' + graphFile
