@@ -70,7 +70,7 @@ def rankL(msg):
     kgsUserL = msg
     print 'Requested username= ', msg
     graphFileL = kgsUserL + '-en_US.png'
-    graphUrl = 'https://www.gokgs.com/servlet/graph/' + kgsUserL + '-en_US.png'
+    graphUrlL = 'https://www.gokgs.com/servlet/graph/' + kgsUserL + '-en_US.png'
     print 'File= ' + graphFileL
     print 'Url= ' + graphUrlL
     
