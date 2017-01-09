@@ -51,7 +51,7 @@ def rank(msg):
         
     else:
         bot.sendPhoto(chat_id, ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
-        bot.sendPhoto(220280982, ('rankgraphlog.png', theGraphLog), caption=(username,' asked rank graph for ' + kgsUser + '.'))
+        bot.sendPhoto(220280982, ('rankgraphlog.png', theGraphLog), caption=(chat_id,' asked rank graph for ' + kgsUser + '.'))
         
         print 'Processing rankgraph.png ...'
         print 'Processing rankgraphlog.png ...'
