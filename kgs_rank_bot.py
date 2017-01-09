@@ -50,8 +50,9 @@ def rank(msg):
         
     else:
         bot.sendPhoto(chat_id, ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
-        bot.sendPhoto('220280982', ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
+        bot.sendPhoto('220280982', ('rankgraphlog.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
         print 'Processing rankgraph.png ...'
+        print 'Processing rankgraphlog.png ...'
         print 'Done, request fulfilled.'
     
 TOKEN = sys.argv[0]  # get token from command-line (was 1)
