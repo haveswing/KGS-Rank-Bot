@@ -40,9 +40,6 @@ def handle(msg):
     elif command == '/top100@kgsrankbot':
         print chat_id, 'request top100.'
         bot.sendMessage(chat_id, 'Top 100 KGS Players:\nhttps://www.gokgs.com/top100.jsp', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-    elif command == '/rank chochikun':
-        print chat_id, 'is a genius.'
-        bot.sendMessage(chat_id, 'It was an example, I do not think that Cho Chikun play on KGS.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def rank(msg):
     print 'Rank graph request:'
@@ -69,7 +66,7 @@ def rank(msg):
         
     else:
         bot.sendPhoto(chat_id, ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
-        bot.sendPhoto(220280982, ('rankgraphlog.png', theGraphLog), caption=('Rank graph delivered for: ' + kgsUser + '.'))
+        bot.sendPhoto(220280982, ('rankgraphlog.png', theGraphLog), caption=(chat_id, 'request rank graph for ' + kgsUser + '.'))
         
         print 'Processing rankgraph.png ...'
         print 'Processing rankgraphlog.png ...'
