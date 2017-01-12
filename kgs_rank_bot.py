@@ -38,12 +38,10 @@ def handle(msg):
         info(msg)
     
     elif command == '/top100':
-        print chat_id, 'request top100.'
-        bot.sendMessage(chat_id, 'Top 100 KGS Players:\nhttps://www.gokgs.com/top100.jsp', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        top100(msg)
     
     elif command == '/top100@kgsrankbot':
-        print chat_id, 'request top100.'
-        bot.sendMessage(chat_id, 'Top 100 KGS Players:\nhttps://www.gokgs.com/top100.jsp', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        top100(msg)
     
 def rank(msg):
     print 'Rank graph request:'
@@ -110,6 +108,18 @@ def info(msg):
         dev = urllib2.urlopen('https://www.gokgs.com/servlet/graph/haveswing-en_US.png')
         bot.sendMessage(chat_id, 'COMMANDS:\n/rank - Get the rank graph of a KGS player.\n/top100 - Top 100 KGS players.\n/info - About the bot...\n\nKGS RANK BOT ON GITHUB:\nhttps://github.com/haveswing/KGS-Rank-Bot\n\nKGS HOMEPAGE:\nhttps://www.gokgs.com/', parse_mode=None, disable_web_page_preview=True, disable_notification=None, reply_to_message_id=None, reply_markup=None)
         bot.sendPhoto(chat_id, ('haveswing.png', dev), caption=('Developed by haveswing.\nantonio.romaggioli@gmail.com'))
+
+def top100(msg):
+    chat_id = msg['chat']['id']
+    command = msg['text']
+    
+    if chat_id == 220280982:
+        print chat_id, 'request top100.'
+        bot.sendMessage(chat_id, 'Top 100 KGS Players:\nhttps://www.gokgs.com/top100.jsp', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    else:
+        print chat_id, 'request top100.'
+        bot.sendMessage(220280982, 'A player request KGS Top 100.')
+        bot.sendMessage(chat_id, 'Top 100 KGS Players:\nhttps://www.gokgs.com/top100.jsp', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
 
 TOKEN = sys.argv[0]
 
