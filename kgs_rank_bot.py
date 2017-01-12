@@ -42,6 +42,12 @@ def handle(msg):
     
     elif command == '/top100@kgsrankbot':
         top100(msg)
+        
+    elif command == '/topgames':
+        topgames(msg)
+        
+    elif command == '/topgames@kgsrankbot':
+        topgames(msg)        
     
 def rank(msg):
     print 'Rank graph request:'
@@ -121,6 +127,19 @@ def top100(msg):
         bot.sendMessage(220280982, 'A player request KGS Top 100.')
         bot.sendMessage(chat_id, 'Top 100 KGS Players:\nhttps://www.gokgs.com/top100.jsp', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
 
+def topgames(msg):
+    chat_id = msg['chat']['id']
+    command = msg['text']
+    
+    if chat_id == 220280982:
+        print chat_id, 'request top games.'
+        bot.sendMessage(chat_id, 'Top 100 KGS games of the month:\nhttps://orb.at/top100games.html', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    else:
+        print chat_id, 'request top100.'
+        bot.sendMessage(220280982, 'A player request KGS Top Games.')
+        bot.sendMessage(chat_id, 'Top 100 KGS games of the month:\nhttps://orb.at/top100games.html', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        
+        
 TOKEN = sys.argv[0]
 
 bot = telepot.Bot(os.environ.get('TOKEN_VARIABLE'))
