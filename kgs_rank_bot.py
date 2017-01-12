@@ -106,7 +106,7 @@ def info(msg):
         bot.sendPhoto(chat_id, ('haveswing.png', dev), caption=('Developed by haveswing.\nantonio.romaggioli@gmail.com'))
     else:
         print chat_id, 'request info.'
-        bot.sendMessage(220280982, 'A player request info.')
+        bot.sendMessage(220280982, 'A player asked KGS Rank Bot info.')
         dev = urllib2.urlopen('https://www.gokgs.com/servlet/graph/haveswing-en_US.png')
         bot.sendMessage(chat_id, 'COMMANDS:\n/rank - Get the rank graph of a KGS player.\n/top100 - Top 100 KGS players.\n/info - About the bot...\n\nKGS RANK BOT ON GITHUB:\nhttps://github.com/haveswing/KGS-Rank-Bot\n\nKGS HOMEPAGE:\nhttps://www.gokgs.com/', parse_mode=None, disable_web_page_preview=True, disable_notification=None, reply_to_message_id=None, reply_markup=None)
         bot.sendPhoto(chat_id, ('haveswing.png', dev), caption=('Developed by haveswing.\nantonio.romaggioli@gmail.com'))
