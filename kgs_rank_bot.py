@@ -85,6 +85,9 @@ def rank(msg):
         print 'Done, request fulfilled.'
         
 def start(msg):
+    chat_id = msg['chat']['id']
+    command = msg['text']
+    
     if chat_id == 220280982:
         print chat_id, 'started KGS Rank Bot.'
         bot.sendMessage(chat_id, 'Hello! Here KGS Rank Bot, may the sente be with you.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
