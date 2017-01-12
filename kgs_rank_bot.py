@@ -32,16 +32,10 @@ def handle(msg):
         start(msg)
     
     elif command == '/info':
-        print chat_id, 'request info.'
-        dev = urllib2.urlopen('https://www.gokgs.com/servlet/graph/haveswing-en_US.png')
-        bot.sendMessage(chat_id, 'COMMANDS:\n/rank - Get the rank graph of a KGS player.\n/top100 - Top 100 KGS players.\n/info - About the bot...\n\nKGS RANK BOT ON GITHUB:\nhttps://github.com/haveswing/KGS-Rank-Bot\n\nKGS HOMEPAGE:\nhttps://www.gokgs.com/', parse_mode=None, disable_web_page_preview=True, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-        bot.sendPhoto(chat_id, ('haveswing.png', dev), caption=('Developed by haveswing.\nantonio.romaggioli@gmail.com'))
+        info(msg)
     
     elif command == '/info@kgsrankbot':
-        print chat_id, 'request info.'
-        dev = urllib2.urlopen('https://www.gokgs.com/servlet/graph/haveswing-en_US.png')
-        bot.sendMessage(chat_id, 'COMMANDS:\n/rank - Get the rank graph of a KGS player.\n/top100 - Top 100 KGS players.\n/info - About the bot...\n\nKGS RANK BOT ON GITHUB:\nhttps://github.com/haveswing/KGS-Rank-Bot\n\nKGS HOMEPAGE:\nhttps://www.gokgs.com/', parse_mode=None, disable_web_page_preview=True, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-        bot.sendPhoto(chat_id, ('haveswing.png', dev), caption=('Developed by haveswing.\nantonio.romaggioli@gmail.com'))
+        info(msg)
     
     elif command == '/top100':
         print chat_id, 'request top100.'
@@ -91,7 +85,7 @@ def start(msg):
         bot.sendMessage(chat_id, 'Hello! Here KGS Rank Bot, may the sente be with you.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     else:
         print chat_id, 'started KGS Rank Bot.'
-        bot.sendMessage(220280982, 'A player started KGS Rank Bot.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        bot.sendMessage(220280982, 'A player started KGS Rank Bot.')
         bot.sendMessage(chat_id, 'Hello! Here KGS Rank Bot, may the sente be with you.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def howtorank(msg):
@@ -100,7 +94,22 @@ def howtorank(msg):
     
     print chat_id, 'request how to rank.'
     bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/rank haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+
+def info(msg):
+    chat_id = msg['chat']['id']
+    command = msg['text']
     
+    if chat_id == 220280982:
+        print chat_id, 'request info.'
+        dev = urllib2.urlopen('https://www.gokgs.com/servlet/graph/haveswing-en_US.png')
+        bot.sendMessage(chat_id, 'COMMANDS:\n/rank - Get the rank graph of a KGS player.\n/top100 - Top 100 KGS players.\n/info - About the bot...\n\nKGS RANK BOT ON GITHUB:\nhttps://github.com/haveswing/KGS-Rank-Bot\n\nKGS HOMEPAGE:\nhttps://www.gokgs.com/', parse_mode=None, disable_web_page_preview=True, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        bot.sendPhoto(chat_id, ('haveswing.png', dev), caption=('Developed by haveswing.\nantonio.romaggioli@gmail.com'))
+    else:
+        print chat_id, 'request info.'
+        bot.sendMessage(220280982, 'A player request info.')
+        dev = urllib2.urlopen('https://www.gokgs.com/servlet/graph/haveswing-en_US.png')
+        bot.sendMessage(chat_id, 'COMMANDS:\n/rank - Get the rank graph of a KGS player.\n/top100 - Top 100 KGS players.\n/info - About the bot...\n\nKGS RANK BOT ON GITHUB:\nhttps://github.com/haveswing/KGS-Rank-Bot\n\nKGS HOMEPAGE:\nhttps://www.gokgs.com/', parse_mode=None, disable_web_page_preview=True, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        bot.sendPhoto(chat_id, ('haveswing.png', dev), caption=('Developed by haveswing.\nantonio.romaggioli@gmail.com'))
 
 TOKEN = sys.argv[0]
 
