@@ -49,6 +49,15 @@ def handle(msg):
     elif command == '/topgames@kgsrankbot':
         topgames(msg)        
     
+    elif command == '/analyze':
+        howtoanalyze(msg)
+        
+    elif command == '/analyze@kgsrankbot':
+        howtoanalyze(msg)
+        
+    elif command.startswith('/analyze '):
+        analyze(msg)
+    
 def rank(msg):
     print 'Rank graph request:'
     chat_id = msg['chat']['id']
@@ -138,7 +147,36 @@ def topgames(msg):
         print chat_id, 'request top100.'
         bot.sendMessage(220280982, 'A player request KGS Top Games.')
         bot.sendMessage(chat_id, 'Top 100 KGS games of the month:\nhttps://orb.at/top100games.html', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
-        
+
+def howtoanalyze(msg):
+    chat_id = msg['chat']['id']
+    command = msg['text']
+    
+    if chat_id == 220280982:
+        print chat_id, 'request KGS analytics.'
+        bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/analyze haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+    else:
+        print chat_id, 'request KGS analytics.'
+        bot.sendMessage(220280982, 'A player request KGS Analytics.')
+        bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/analyze haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+
+def analyze(msg):
+    print 'KGS Analytics requested:'
+    chat_id = msg['chat']['id']
+    command = msg['text']
+    print 'ID= ', chat_id
+    
+    kgsUserAnalyze = msg['text'][9:]
+    print 'Requested username= ', msg['text'][9:]
+    analyzeUrl = 'http://kgs.gosquares.net/index.rhtml.en?id=' + kgsUserAnalyze
+    print 'Analytics Url= ' + analyzeUrl
+    
+    if chat_id == 220280982:
+        bot.sendMessage(chat_id, 'KGS Analytics for ' + kgsUserAnalyze + ':\n' + analyzeUrl)
+    else:
+        bot.sendMessage(220280982, 'KGS Analytics delivered: ' + kgsUserAnalyze)
+        bot.sendMessage(chat_id, 'KGS Analytics for ' + kgsUserAnalyze + ':\n' + analyzeUrl) 
+    
         
 TOKEN = sys.argv[0]
 
