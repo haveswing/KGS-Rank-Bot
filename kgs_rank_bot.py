@@ -174,7 +174,7 @@ def analyze(msg):
     if chat_id == 220280982:
         bot.sendMessage(chat_id, 'KGS Analytics for ' + kgsUserAnalyze + ':\n' + analyzeUrl)
     else:
-        bot.sendMessage(220280982, 'KGS Analytics delivered: ' + kgsUserAnalyze)
+        bot.sendMessage(220280982, 'KGS Analytics delivered: ' + kgsUserAnalyze + '.')
         bot.sendMessage(chat_id, 'KGS Analytics for ' + kgsUserAnalyze + ':\n' + analyzeUrl) 
     
         
