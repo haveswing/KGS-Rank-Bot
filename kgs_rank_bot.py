@@ -54,7 +54,7 @@ def handle(msg):
         bot.sendMessage(chat_id, 'Top 100 KGS Players:\nhttps://www.gokgs.com/top100.jsp', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
     elif command == '/html':
-        bot.sendMessage(chat_id, "<a> href="http://www.google.it">ciao</a>", parse_mode=HTML)
+        bot.sendMessage(chat_id, "<a>href="http://www.google.it">ciao</a>", HTML)
     
 def rank(msg):
     print 'Rank graph request:'
