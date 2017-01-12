@@ -78,7 +78,7 @@ def rank(msg):
         
     else:
         bot.sendPhoto(chat_id, ('rankgraph.png', theGraph), caption=('KGS rank graph for ' + kgsUser + '.'))
-        bot.sendPhoto(220280982, ('rankgraphlog.png', theGraphLog), caption=(username,'Rank graph delivered: ' + kgsUser + '.'))
+        bot.sendPhoto(220280982, ('rankgraphlog.png', theGraphLog), caption=('Rank graph delivered: ' + kgsUser + '.'))
         
         print 'Processing rankgraph.png ...'
         print 'Processing rankgraphlog.png ...'
@@ -90,7 +90,7 @@ def start(msg):
         bot.sendMessage(chat_id, 'Hello! Here KGS Rank Bot, may the sente be with you.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     else:
         print chat_id, 'started KGS Rank Bot.'
-        bot.sendMessage(220280982, (username,'started KGS Rank Bot.'), parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        bot.sendMessage(220280982, 'A player started KGS Rank Bot.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
         bot.sendMessage(chat_id, 'Hello! Here KGS Rank Bot, may the sente be with you.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     
 def howtorank(msg):
