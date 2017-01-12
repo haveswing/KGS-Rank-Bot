@@ -26,12 +26,10 @@ def handle(msg):
         howtorank(msg)
     
     elif command == '/start':
-        print chat_id, 'started KGS Rank Bot.'
-        bot.sendMessage(chat_id, 'Hello! Here KGS Rank Bot, may the sente be with you.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        start(msg)
     
     elif command == '/start@kgsrankbot':
-        print chat_id, 'started KGS Rank Bot.'
-        bot.sendMessage(chat_id, 'Hello! Here KGS Rank Bot, may the sente be with you.', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        start(msg)
     
     elif command == '/info':
         print chat_id, 'request info.'
