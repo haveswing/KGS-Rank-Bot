@@ -170,11 +170,12 @@ def analyze(msg):
     print 'Requested username= ', msg['text'][9:]
     analyzeUrl = 'http://kgs.gosquares.net/index.rhtml.en?id=' + kgsUserAnalyze
     print 'Analytics Url= ' + analyzeUrl
+    print 'Done, Analytics delivered.'
     
     if chat_id == 220280982:
         bot.sendMessage(chat_id, 'KGS Analytics for ' + kgsUserAnalyze + ':\n' + analyzeUrl)
     else:
-        bot.sendMessage(220280982, 'KGS Analytics delivered: ' + kgsUserAnalyze + '.')
+        bot.sendMessage(220280982, 'KGS Analytics delivered: ' + kgsUserAnalyze + '.\n' + analyzeUrl)
         bot.sendMessage(chat_id, 'KGS Analytics for ' + kgsUserAnalyze + ':\n' + analyzeUrl) 
     
         
