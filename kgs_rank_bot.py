@@ -106,10 +106,10 @@ def howtorank(msg):
     command = msg['text']
     
     if chat_id == 220280982:
-        print chat_id, 'request KGS rank.'
+        print chat_id, 'request how to rank.'
         bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/rank haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     else:
-        print chat_id, 'request KGS analytics.'
+        print chat_id, 'request how to rank.'
         bot.sendMessage(220280982, 'A player request how to rank.')
         bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/rank haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
 
@@ -158,10 +158,10 @@ def howtoanalyze(msg):
     command = msg['text']
     
     if chat_id == 220280982:
-        print chat_id, 'request KGS analytics.'
+        print chat_id, 'request how to analyze.'
         bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/analyze haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     else:
-        print chat_id, 'request KGS analytics.'
+        print chat_id, 'request how to analyze.'
         bot.sendMessage(220280982, 'A player request how to analyze.')
         bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/analyze haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
 
