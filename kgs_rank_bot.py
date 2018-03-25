@@ -107,11 +107,11 @@ def howtorank(msg):
     
     if chat_id == 220280982:
         print chat_id, 'request how to rank.'
-        bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/rank haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/rank yournickname".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     else:
         print chat_id, 'request how to rank.'
         bot.sendMessage(220280982, 'A player request how to rank.')
-        bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/rank haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/rank yournickname".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
 
 def info(msg):
     chat_id = msg['chat']['id']
@@ -159,11 +159,11 @@ def howtoanalyze(msg):
     
     if chat_id == 220280982:
         print chat_id, 'request how to analyze.'
-        bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/analyze haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/analyze yournickname".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
     else:
         print chat_id, 'request how to analyze.'
         bot.sendMessage(220280982, 'A player request how to analyze.')
-        bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/analyze haveswing".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
+        bot.sendMessage(chat_id, 'Use this command directly with the KGS username.\ne.g.: "/analyze yournickname".', parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
 
 def analyze(msg):
     print 'KGS Analytics requested:'
